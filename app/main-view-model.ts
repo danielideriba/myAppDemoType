@@ -1,5 +1,7 @@
 import { Observable } from '@nativescript/core'
 
+import { MapView } from '@nativescript/google-maps';
+
 export class HelloWorldModel extends Observable {
   private _counter: number
   private _message: string

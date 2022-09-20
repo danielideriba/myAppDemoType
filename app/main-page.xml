@@ -1,9 +1,21 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+<Page 
+    xmlns:Hmap="@nativescript/hms-mapkit"
+    xmlns:Gmap="@nativescript/google-maps" 
+    xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
     <ActionBar title="My App" icon="" />
 
-    <StackLayout class="p-20">
+    <!-- <StackLayout class="p-20">
         <Label text="Tap the button" class="h1 text-center" />
         <Button text="TAP" tap="{{ onTap }}" class="-primary" />
         <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
-    </StackLayout>
+    </StackLayout> -->
+
+    <Hmap:MapView
+        ready="onReady"
+        mapTap="onTapOne"
+        mapLongPress="onLongPress"
+        markerTap="onMarkerTap"
+    />
+
+
 </Page>

@@ -9,7 +9,7 @@ android {
   // ndkVersion ""
 
   defaultConfig {
-    minSdkVersion 17
+    minSdkVersion 23
     // targetSdkVersion 32
 
     // Version Information
@@ -17,9 +17,27 @@ android {
     versionName "1.0.0"
     
     generatedDensities = []
+    ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
   }
 
   aaptOptions {
     additionalParameters "--no-version-vectors"
   }
+
+  // signingConfigs {
+  //     config {
+  //         storeFile file('/Users/macbook/projetos/nativeScriptPlugins/myAppDemoType/app/myapp-demotype.keystore')
+  //         storePassword 'myAppDemoType'
+  //         keyAlias 'myAppDemoType'
+  //         keyPassword 'myAppDemoType'
+  //     }
+  // }
+  // buildTypes {
+  //   debug {
+  //     signingConfig signingConfigs.config
+  //   }
+  //   release {
+  //     signingConfig signingConfigs.config
+  //   }
+  // }
 }
